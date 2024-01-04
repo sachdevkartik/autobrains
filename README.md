@@ -1,34 +1,18 @@
 # autobrains
 
-
-```python
--> Union[
-        Tuple[List[Image.Image], Union[int, List[int]]],
-        Tuple[
-            "torch.Tensor[num_frames, channels, height, width]", Union[int, List[int]]
-        ],
-        Tuple[Any, Union[int, List[int]]],
-    ]
-
-
--> Union[
-        Tuple[List[Image.Image], Union[int, List[int]]],
-        Tuple[
-            "torch.Tensor[num_frames, channels, height, width]", Union[int, List[int]]
-        ],
-        Tuple[Any, Union[int, List[int]]],
-    ]
-```
-
 TODOs:
-[] logger
+
+    [x] logger
     [x] save checkpoint
     [x] save config
-    [] plot: [x] loss & [x] trajectory (full & segments)
-[] tensorboard integration
-[] setup.py
-    [] requirements
-[] Readme.md
+    [x] plot: 
+        [x] loss 
+        [x] trajectory (full & segments)
+    [] docker
+    [] setup.py
+        [] requirements
+    [] Readme.md
+    [] Profiling
 
 
 https://stackoverflow.com/questions/582336/how-do-i-profile-a-python-script
