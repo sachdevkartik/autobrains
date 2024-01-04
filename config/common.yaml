@@ -1,0 +1,7 @@
+root_datapath: "../data" # relative to config
+logger_path : "../logger"
+
+num_waypoints: 4
+dim_waypoints: 2
+device: "cuda"
+split_ratio: 0.25

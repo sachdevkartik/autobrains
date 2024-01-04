@@ -1,0 +1,32 @@
+train:
+  batch_size: 16
+  learning_rate: 0.001
+  epochs: 100
+  save_checkpoint: True
+  save_checkpoint_freq: 2
+  save_best_after: 10
+  use_scheduler: True
+  scheduler:
+    name: "cosine"
+    num_warmup_steps: 0
+model:
+  rnn_type: lstm
+  name: levit_256x256
+  input_size: 256
+  hidden_size: 256
+  vit:
+    vit_model: levit
+    stages: 5
+    dim: [256, 256, 256]
+    depth: 7
+    heads: [6, 6, 7]
+    mlp_mult: 3
+    dropout: 0.1
+
+# scheduler name:
+# LINEAR = "linear"
+# COSINE = "cosine"
+# COSINE_WITH_RESTARTS = "cosine_with_restarts"
+# POLYNOMIAL = "polynomial"
+# CONSTANT = "constant"
+# CONSTANT_WITH_WARMUP = "constant_with_warmup"
