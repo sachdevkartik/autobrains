@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from .common import get_activation
+from .common import *
 
 
 def get_rnn(rnn_type: str) -> nn.Module:
@@ -104,14 +104,14 @@ class BaseRNN2(nn.Module):
         self.rnn_layers = nn.ModuleList(layers)
 
         self.batch_norm_rnn = nn.BatchNorm1d(self.config["hidden_size"])
-        
+
         # Fully connected layer for output
         self.fc_layers = nn.ModuleList(
-            [
-                nn.Linear(self.config["hidden_size"], self.config["dim_waypoints"])
-                for _ in range(self.config["num_waypoints"])
-            ]
-        )
+                [
+                    nn.Linear(self.config["hidden_size"], self.config["dim_waypoints"])
+                    for _ in range(self.config["num_waypoints"])
+                ]
+            )
 
     def forward(self, x):
         if self.activation_fn:

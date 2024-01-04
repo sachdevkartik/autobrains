@@ -61,3 +61,26 @@ def get_sequential_mlp(
             layers.append(torch.nn.BatchNorm1d(unit))
 
     return nn.Sequential(*layers)
+
+
+def get_sequential_mlp_with_last_layer(
+    input_size, units, activation, last_layer, norm_func_name=None, need_norm=True
+):
+    in_size = input_size
+    layers = []
+    need_norm = need_norm
+    for unit in units:
+        layers.append(nn.Linear(in_size, unit))
+        layers.append(get_activation(activation))
+        in_size = unit
+        if not need_norm:
+            continue
+        if norm_func_name is not None:
+            need_norm = False
+        if norm_func_name == "layer_norm":
+            layers.append(torch.nn.LayerNorm(unit))
+        elif norm_func_name == "batch_norm":
+            layers.append(torch.nn.BatchNorm1d(unit))
+
+    layers.append(nn.Linear(unit, last_layer))
+    return nn.Sequential(*layers)

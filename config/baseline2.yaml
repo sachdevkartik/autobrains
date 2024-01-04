@@ -19,7 +19,7 @@ model:
   resnet:
     model_name: resnet101
     pretrained: True
-  rnn_type: lstm
+  rnn_type: gru
   speed_sequential_mlp:
     input_size: 1
     units: [128, 256, 128]
