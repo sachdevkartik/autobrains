@@ -167,3 +167,4 @@ cython_debug/
 
 # folders
 logger/*
+autobrains.egg-info
