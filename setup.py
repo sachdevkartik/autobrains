@@ -16,6 +16,10 @@ setup(
     packages=find_packages(
         include=[
             "autobrains",
+            "autobrains.data_loader",
+            "autobrains.models",
+            "autobrains.trainer",
+            "autobrains.utils",
         ]
     ),
     keywords=[
