@@ -1,0 +1,18 @@
+# folders to ignore
+/data/*
+**/dataset/*
+**/checkpoints/*
+*/.ipynb_checkpoints
+*/__pycache__
+wandb/*
+/logger/*
+
+# files to ignore
+*.tgz
+*.tar
+*.zip
+*.DS_Store
+*.npz
+*.pt
+
+
