@@ -161,10 +161,10 @@ cython_debug/
 
 # data
 *.npy
-*.png
 *.pdf
 *.zip
 
 # folders
 logger/*
 autobrains.egg-info
+data/*
