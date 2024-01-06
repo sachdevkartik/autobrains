@@ -1,0 +1,28 @@
+train:
+  batch_size: 32
+  learning_rate: 0.0005
+  epochs: 100
+  save_checkpoint: True
+  # load_checkpoint: /home/kartik/git/autobrains/logger/2024-01-04-11-41-23/checkpoint/weights.pth
+  save_checkpoint_freq: 2
+  save_best_after: 10
+  use_scheduler: True
+  scheduler:
+    name: cosine
+    num_warmup_steps: 0
+model:
+  name: resnet101_256x256
+  backbone: resnet101
+  input_size: 512
+  hidden_size: 512
+  activation_fn: gelu
+  resnet:
+    model_name: resnet101
+    pretrained: True
+  rnn_type: gru
+  speed_sequential_mlp:
+    input_size: 1
+    units: [128, 128]
+    activation: sigmoid
+    norm_func_name: batch_norm
+    need_norm: True
