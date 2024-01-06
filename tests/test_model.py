@@ -2,7 +2,6 @@ import os
 
 import torch
 from torch.utils.data import DataLoader
-from torchsummary import summary
 
 from autobrains.data_loader.augmentations import transform_resnet
 from autobrains.data_loader.video_loader import VideoFrameDataset, VideoRecord
@@ -48,6 +47,8 @@ def test_CNNLSTMBaseline():
 
 
 def test_VitRNNBaseline():
+    """_summary_
+    """
     # load configs
     baseline_config_path = make_absolute_path(
         os.path.abspath(__file__), "../config/levit.yaml"
@@ -96,7 +97,7 @@ def test_CNNLSTMBaseline2():
     print("Testing CNNLSTMBaseline2: ")
     # load configs
     baseline_config_path = make_absolute_path(
-        os.path.abspath(__file__), "../config/baseline2.yaml"
+        os.path.abspath(__file__), "../config/baseline.yaml"
     )
     common_config_path = make_absolute_path(
         os.path.abspath(__file__), "../config/common.yaml"
