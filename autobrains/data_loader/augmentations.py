@@ -18,11 +18,3 @@ transform_speed = transforms.Compose(
         transforms.Normalize(mean=[6.4771], std=[3.7553]),
     ]
 )
-
-
-# transform_speed = transforms.Compose(
-#     [
-#         torch.tensor(record.speed, dtype=torch.float32),
-#         transforms.Normalize(mean=[6.4771], std=[3.7553]),
-#     ]
-# )
