@@ -38,6 +38,7 @@ setup(
         "requests>=2.25.1",
         "scipy>=1.4.1",
         "torch==2.0.1",
+        "torchsummary",
         "vit-pytorch==0.27.0",
         "torchvision>=0.7.0",
         "torchinfo",
@@ -56,5 +57,6 @@ setup(
         "einops",
         "protobuf==3.20.*",
         "lightly",
+        "lark"
     ],
 )
