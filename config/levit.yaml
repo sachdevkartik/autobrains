@@ -10,10 +10,17 @@ train:
     name: "cosine"
     num_warmup_steps: 0
 model:
-  rnn_type: lstm
+  rnn_type: gru
   name: levit_256x256
   input_size: 256
   hidden_size: 256
+  activation_fn: gelu
+  speed_sequential_mlp:
+    input_size: 1
+    units: [128, 128]
+    activation: sigmoid
+    norm_func_name: batch_norm
+    need_norm: True
   vit:
     vit_model: levit
     stages: 5
