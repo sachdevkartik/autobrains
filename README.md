@@ -9,8 +9,8 @@ TODOs:
         [x] loss 
         [x] trajectory (full & segments)
     [] docker
-    [] setup.py
-        [] requirements
+    [x] setup.py
+        [x] requirements
     [] Readme.md
     [] Profiling
 
