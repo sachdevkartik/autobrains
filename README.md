@@ -20,7 +20,7 @@ OR using  ```requirements.txt```:
 git clone git@github.com:sachdevkartik/autobrains.git
 cd autobrains
 
-pip3 install --upgrade -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 **Note**: Installation using docker is not tested yet due to space issues in my workstation
@@ -84,7 +84,7 @@ Vision Transformers:
     year={2021}
   }
   ```
-  
+
  * [LeViT](https://openaccess.thecvf.com/content/ICCV2021/papers/Graham_LeViT_A_Vision_Transformer_in_ConvNets_Clothing_for_Faster_Inference_ICCV_2021_paper.pdf)
 
     ```bibtex
